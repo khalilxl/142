@@ -1,6 +1,7 @@
 #ifndef TABLE_H_
 #define TABLE_H_
 #include <vector>
+#include <fstream>
 #include "chair.h"
 
 class Table{
