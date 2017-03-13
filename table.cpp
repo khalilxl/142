@@ -67,13 +67,19 @@ void Table::view_table(){
 	}
 	else {
 		int n;
+		ofstream file;
+		file.open("Order.txt", ios::app);
 		cout << "\n";
 		for (i=0; i < people; i++){
 			cout << tables[i].pos_return() + 1 << endl;
+			file<< "Position: " <<tables[i].pos_return() + 1 <<endl;
 			for (n=0; n < tables[i].counter; n++){
 				cout << tables[i].order[n] << endl;
+				file<<tables[i].order[n] <<endl;
+				file<< "\n";
 			}
 		}
+		file.close();
 	}
 	
 }
