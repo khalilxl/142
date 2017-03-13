@@ -41,6 +41,9 @@ int main(){
 	do{
 		cout << "Which table would you like to look at? 1, 2, 3, or 4? " << endl;
 		cin >> counter;
+		ofstream file;
+		file.open("Order.txt", ios::app);
+		file << "Table: " << counter<< endl;
 		switch (counter){
 			case 1: command(A);
 					break;
